@@ -61,6 +61,12 @@ The project has been tested on Ubuntu 16.04(ROS Kinetic) and 18.04(ROS Melodic).
   cd ../ 
   catkin_make
 ```
+Addtional info for making.
+1. Need nlopt. https://github.com/stevengj/nlopt  - not sure if it is this
+2. Alternatively, think this is the one. Need to clone this. https://github.com/ethz-asl/nlopt  Then put this into the src file of your workspace.
+3. Then amend the CMAKEList.txt file and add in the set(CMAKE_CXX_STANDARD 14) line in front of the text file.
+4. If still doesn't work might need to ensure gcc version is 9++.
+5. Otherwise, look at these https://github.com/PointCloudLibrary/pcl/issues/2968 and https://github.com/ethz-asl/orb_slam_2_ros/issues/10
 
 You may check the detailed [instruction](#3-setup-and-config) to setup the project. 
 After compilation you can start the visualization by: 
